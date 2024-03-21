@@ -1,0 +1,100 @@
+section.team_filter {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 20px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+section.team_filter > p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+section.team_filter > div {
+  display: grid;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.grid_columns_v3 {
+  grid-template-columns: 3% 92% 5%;
+}
+
+section.team_filter > div ul {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding: 10px;
+  background: var(--background-color);
+  max-width: 100%;
+  width: fit-content;
+  border-radius: 4px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
+}
+
+section.team_filter > div button:hover {
+  background: inherit;
+}
+
+section.team_filter > div button:active {
+  transform: scale(0.8);
+}
+
+section.team_filter > div button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white-color);
+  box-shadow: 0px 0px 20px 0px rgba(137, 147, 158, 0.2);
+}
+
+section.team_filter > div button img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+section.team_filter > div button:nth-child(1) img.arrow {
+  transform: rotate(90deg);
+}
+
+section.team_filter > div button:nth-child(3) img.arrow {
+  transform: rotate(-90deg);
+}
+
+section.team_filter > div ul::-webkit-scrollbar {
+  display: none;
+}
+
+section.team_filter > div ul li {
+  padding: 5px 10px;
+  font-size: 14px;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  font-weight: 400;
+  scroll-snap-align: start;
+  border-radius: 4px;
+  line-height: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+section.team_filter > div ul li.active {
+  background: var(--white-color);
+  border-radius: 5px;
+}
+
+section.team_filter > a button.btn {
+  background: var(--black-color);
+  justify-self: flex-end;
+  width: 168px;
+  height: 40px;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}

@@ -1,0 +1,300 @@
+div.table_system {
+  margin-top: 16px;
+}
+
+div.table_system ul {
+  grid-template-columns: 90px 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+div.table_system div.table_header ul {
+  display: grid;
+  column-gap: 15px;
+  padding: 0 10px;
+}
+
+div.table_system div.table_header ul li {
+  font-size: 14px !important;
+}
+
+div.table_system div.table_header ul li {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  width: 100%;
+}
+li.icons {
+  display: flex !important;
+  gap: 10px !important;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+li.icons img {
+  width: 20px;
+  height: 20px;
+}
+.text_estado p {
+  border-radius: 35px;
+  border: 1.1px solid var(--success-color);
+  background: var(--gray-light-color);
+  color: var(--success-color);
+  display: flex;
+  padding: 8.8px 17.6px;
+  justify-content: center;
+  align-items: center;
+}
+.customer_portal {
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+}
+.customer_portal img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+.text_state_inactive p {
+  border-radius: 35px;
+  display: flex;
+  padding: 8.8px 17.6px;
+  border: 1.1px solid var(--primary-color);
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  background: var(--inactive-color);
+}
+.text_state_test p {
+  border-radius: 35px;
+  display: flex;
+  padding: 8.8px 17.6px;
+  border: 1.1px solid var(--test-color-light);
+  justify-content: center;
+  align-items: center;
+  background: var(--test-color);
+  color: var(--test-color-light);
+}
+
+div.table_system div.table_header ul li:nth-child(6) {
+  display: flex;
+  justify-content: center;
+}
+div.table_system div.table_header ul li:nth-child(7) {
+  display: flex;
+  justify-content: center;
+}
+div.table_system div.table_header ul li:nth-child(3) {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+div.table_system div.table_header ul li:nth-child(8),
+div.table_system div.table_header ul li:nth-child(9) {
+  display: flex;
+  justify-content: center;
+}
+
+div.table_system div.table_content {
+  display: grid;
+  row-gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.system_list {
+  display: flex;
+  align-items: center;
+}
+
+div.table_system div.table_content div.table_item {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 1px solid var(--disabled-color);
+  height: fit-content;
+  overflow: hidden;
+}
+
+div.table_system div.table_content div.table_item input[type="checkbox"] {
+  display: none;
+}
+
+div.table_system div.table_content div.table_item > label {
+  cursor: pointer;
+}
+
+div.table_system div.table_content div.table_item > label ul {
+  display: grid;
+  column-gap: 15px;
+  align-items: center;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+div.table_system div.table_content div.table_item > label ul li {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+div.table_system div.table_content div.table_item > label ul li:nth-child(1) {
+  display: flex;
+}
+
+div.table_system div.table_content div.table_item > label ul li.show strong {
+  position: relative;
+}
+div.table_system div.table_content div.table_item > label ul li.show {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+div.table_system div.table_content div.table_item > label ul li {
+  width: 100%;
+}
+
+div.table_system div.table_content div.table_item > label ul li img {
+  margin-right: 10px;
+}
+
+div.table_system div.table_content div.table_item > label ul li span {
+  display: block;
+  font-weight: 700;
+}
+
+div.table_system div.table_content div.table_item > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  display: none;
+  height: 0;
+}
+
+div.table_system div.table_content div.table_item > div div {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+div.table_system div.table_content div.table_item > div div p {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  max-width: 100px;
+}
+
+div.table_system div.table_content div.table_item > div div p span {
+  font-weight: 700;
+}
+.btn_edit {
+  width: 12px;
+  background: transparent;
+}
+.btn_edit_delete {
+  display: flex;
+}
+#btn_delete {
+  border: none;
+  border-radius: 20px;
+  height: 37px;
+}
+
+div.table_system div.table_content div.table_item > div div button {
+  height: 30px;
+  padding: 0 10px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  width: 80px;
+}
+
+div.table_system
+  div.table_content
+  div.table_item
+  > div
+  div
+  button:nth-child(2)
+  img {
+  filter: brightness(0) invert(1);
+}
+
+.table_content ul li {
+  display: flex;
+  align-items: center;
+}
+
+div.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+div.buttons img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+div.buttons button {
+  background: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+}
+
+div.buttons button:nth-child(2) {
+  background: var(--error-color);
+}
+
+@media screen and (max-width: 1500px) {
+  div.table_system ul {
+    grid-template-columns: 85px 1fr 1fr 1fr 136px 1fr 1fr;
+  }
+  div.table_system div.table_content div.table_item > label ul li.show {
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+  }
+  li.icons {
+    display: flex !important;
+    gap: 10px !important;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  div.table_system div.table_header ul li {
+    font-size: 12px !important;
+  }
+  li.icons img {
+    width: 15px;
+    height: 15px;
+  }
+  .customer_portal {
+    font-size: 12px;
+  }
+  .customer_portal img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* @media screen and (max-width: 1400px) {
+  div.table_system ul {
+    grid-template-columns: 1fr 50px 1fr 50px 50px 1fr 100px 90px 70px;
+  }
+} */

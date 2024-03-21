@@ -1,0 +1,10 @@
+div.module_addRegister {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+div.module_addRegister div.content_right {
+  display: grid;
+  gap: 20px;
+}

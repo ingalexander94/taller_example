@@ -1,0 +1,13 @@
+article.list_equipments {
+  margin: 34px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 12px;
+  row-gap: 35px;
+}
+
+@media screen and (max-width: 1500px) {
+  article.list_equipments {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

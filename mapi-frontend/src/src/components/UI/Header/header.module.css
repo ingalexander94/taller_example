@@ -1,0 +1,138 @@
+nav.navbar {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: calc(100% - 390px);
+  left: 310px;
+  display: flex;
+  background: var(--background-color);
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c8cbd9;
+}
+
+nav.navbar h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+nav.navbar > ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 24px;
+}
+
+nav.navbar > ul li {
+  cursor: pointer;
+}
+
+nav.navbar > ul li.notifications {
+  visibility: hidden;
+}
+
+nav.navbar > ul li label {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  position: relative;
+  padding-right: 20px;
+}
+
+nav.navbar > ul li label ul {
+  list-style: none;
+  background: var(--white-color);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  right: 0;
+  min-width: 120px;
+  top: 46px;
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+nav.navbar > ul li label ul li {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.navbar > ul li label ul li:hover {
+  background: var(--background-color);
+  border-radius: 5px;
+}
+
+nav.navbar > ul li label::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-image: url("../../../assets/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  right: 0;
+  transition: 0.5s;
+}
+
+nav.navbar > ul li input {
+  display: none;
+}
+
+nav.navbar > ul li > img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+
+nav.navbar > ul li label div:hover {
+  background: var(--error-color);
+}
+
+nav.navbar > ul li label div {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--background-color);
+}
+
+nav.navbar > ul li label div img {
+  height: 16px;
+  width: 16px;
+  object-fit: contain;
+}
+
+nav.navbar > ul li label > img {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#submenu:checked ~ label::before {
+  transform: rotate(-180deg);
+}
+
+#submenu:checked ~ label ul {
+  display: flex;
+}
+
+@media screen and (max-width: 1500px) {
+  nav.navbar {
+    width: calc(100% - 300px);
+    left: 260px;
+  }
+}

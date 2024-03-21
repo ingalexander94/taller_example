@@ -1,0 +1,290 @@
+section.list_system {
+  padding: 14px;
+}
+
+section.list_system aside.empty {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 26px;
+}
+
+section.list_system aside.empty h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+section.list_system aside.empty p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+section.list_system aside.empty button {
+  width: 210px;
+  height: 40px;
+}
+
+section.list_system aside.empty button img {
+  width: 20px;
+  height: 20px;
+}
+
+section.list_system aside.empty img {
+  width: 100%;
+  height: 365px;
+  object-fit: cover;
+}
+
+section.list_system aside.empty:only-child {
+  display: flex;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+section.list_system div.system_actions div.list_components {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 8px;
+  width: 100%;
+}
+
+section.list_system div.system_actions div.list_components {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  column-gap: 8px;
+  align-items: center;
+}
+
+section.list_system div.system_actions div.list_components ul {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding: 10px;
+  max-width: 100%;
+  border-radius: 4px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
+}
+
+section.list_system div.system_actions div.list_components_buttons button:hover {
+  background: inherit;
+}
+
+section.list_system div.system_actions div.list_components_buttons button:active {
+  transform: scale(0.8);
+}
+
+section.list_system div.system_actions div.list_components_buttons button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white-color);
+  box-shadow: 0px 0px 20px 0px rgba(137, 147, 158, 0.2);
+}
+
+section.list_system div.system_actions div.list_components_buttons button img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+section.list_system
+  div.system_actions
+  div.list_components_buttons
+  button:nth-child(1)
+  img {
+  transform: rotate(90deg);
+}
+
+section.list_system
+  div.system_actions
+  div.list_components_buttons
+  button:nth-child(3)
+  img {
+  transform: rotate(-90deg);
+}
+
+section.list_system
+  div.system_actions
+  div.list_components
+  ul::-webkit-scrollbar {
+  display: none;
+}
+
+section.list_system div.system_actions div.list_components ul li {
+  padding: 5px 10px;
+  font-size: 10px;
+  background: var(--white-color);
+  border: 1.5px solid var(--black-color);
+  text-wrap: nowrap;
+  white-space: nowrap;
+  font-weight: 400;
+  scroll-snap-align: start;
+  border-radius: 4px;
+  line-height: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+section.list_system div.system_actions div.list_components ul li.active {
+  font-weight: 700;
+  background: var(--black-color);
+  color: var(--white-color);
+  transition: 0.5s;
+}
+
+section.list_system div.system_actions > button {
+  justify-self: flex-end;
+  width: 168px;
+  padding: 0 20px;
+  height: 40px;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+section.list_system > div button:active {
+  transform: scale(0.8);
+}
+
+section.list_system > div button img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+section.list_system > div button:nth-child(1) img {
+  transform: rotate(90deg);
+}
+
+section.list_system > div button:nth-child(3) img {
+  transform: rotate(-90deg);
+}
+
+section.list_system > div ul::-webkit-scrollbar {
+  display: none;
+}
+
+section.list_system div.system_actions {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  column-gap: 8px;
+}
+
+section.list_system div.system_actions ul {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+section.list_system div.system_actions button.search_icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: none;
+  top: 6px;
+  right: 10px;
+  pointer-events: none;
+}
+
+section.list_system div.system_actions button.search_icon.active {
+  pointer-events: all;
+}
+
+section.list_system div.system_actions div {
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+section.list_system div.system_actions p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  max-width: 230px;
+}
+
+section.list_system div.system_actions button {
+  height: 30px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  padding: 0 10px;
+  line-height: 12px;
+}
+
+section.list_system div.system_actions button img {
+  height: 15px;
+  width: 15px;
+  object-fit: contain;
+}
+
+section.list_system div.system_actions input {
+  height: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  padding-left: 10px;
+  padding-right: 35px;
+  min-width: 210px;
+}
+
+@media screen and (max-width: 1450px) {
+  section.list_system div.system_actions input {
+    min-width: auto;
+    width: 30px;
+    padding: 0;
+    text-align: center;
+    color: transparent;
+    background-position: 50%;
+    cursor: pointer;
+  }
+
+  section.list_system div.system_actions button.search_icon {
+    width: 16px;
+    height: 16px;
+    right: 5px;
+  }
+
+  section.list_system div.system_actions input::placeholder {
+    color: transparent;
+  }
+
+  section.list_system div.system_actions input:focus {
+    width: 280px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 30px;
+    color: var(--text-color);
+  }
+
+  section.list_system div.system_actions input:focus::placeholder {
+    color: var(--disabled-color);
+  }
+
+  section.list_system
+    div.system_actions
+    input:focus
+    ~ button:not(.search_icon) {
+    display: none;
+  }
+
+  section.list_system aside.empty img {
+    width: 180px;
+    height: 180px;
+  }
+
+  section.list_system aside.empty:only-child {
+    margin-top: 50px;
+  }
+}

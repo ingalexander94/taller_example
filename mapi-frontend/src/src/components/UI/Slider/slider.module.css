@@ -1,0 +1,101 @@
+section.slider {
+  width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+section.slider input {
+  display: none;
+}
+
+section.slider div.wrapper {
+  height: 100%;
+  width: calc(600px * 3);
+  display: flex;
+}
+
+section.slider div.slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 2s;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 600px;
+  padding-bottom: 90px;
+}
+
+section.slider div.slide:nth-of-type(1) {
+  background-image: url("../../../assets/mechanic.jpg");
+}
+
+section.slider div.slide:nth-of-type(2) {
+  background-image: url("../../../assets/driver.jpg");
+}
+
+section.slider div.slide:nth-of-type(3) {
+  background-image: url("../../../assets/manager.jpg");
+}
+
+section.slider div.slide p {
+  text-wrap: wrap;
+  background: rgba(255, 242, 242, 0.13);
+  backdrop-filter: blur(50px);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  height: 150px;
+  width: 420px;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  color: var(--white-color);
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 10px;
+}
+
+section.slider div.navigation_manual {
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+  display: flex;
+  column-gap: 8px;
+  justify-content: center;
+}
+
+section.slider div.navigation_manual label.manual_btn {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  transition: 1s;
+  cursor: pointer;
+  background: var(--white-color);
+}
+
+#radio1:checked ~ div.wrapper .first {
+  margin-left: 0px;
+}
+
+#radio2:checked ~ div.wrapper .first {
+  margin-left: -600px;
+}
+
+#radio3:checked ~ div.wrapper .first {
+  margin-left: -1200px;
+}
+
+#radio1:checked ~ div.navigation_manual .auto_btn1,
+#radio2:checked ~ div.navigation_manual .auto_btn2,
+#radio3:checked ~ div.navigation_manual .auto_btn3 {
+  width: 30px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1199px) {
+  section.slider {
+    display: none;
+  }
+}

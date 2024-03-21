@@ -1,0 +1,103 @@
+li.brand_item {
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid var(--disabled-color);
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+li.brand_item div.name_model {
+  display: grid;
+  padding: 0 20px;
+  grid-template-columns: 130px 250px 1fr;
+  column-gap: 14px;
+  align-items: center;
+}
+
+li.brand_item div.name_model button {
+  width: 140px;
+  height: 30px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  justify-self: flex-end;
+}
+
+li.brand_item div.name_model label {
+  height: 30px;
+  overflow: hidden;
+  color: var(--disabled-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 0 10px;
+  background: var(--background-color);
+  border-radius: 4px;
+}
+
+li.brand_item div.name_model input {
+  height: 30px;
+  font-size: 14px;
+  color: var(--black-color);
+}
+
+li.brand_item div.name_model input.error {
+  background: var(--error-color);
+  border: none;
+}
+
+li.brand_item div.list_models {
+  padding: 0 20px;
+}
+
+li.brand_item div.list_models div.header {
+  display: grid;
+  grid-template-columns: 50px 1fr 2fr 1fr 1fr 1fr 1fr 1fr 30px;
+  column-gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+li.brand_item div.list_models fieldset {
+  border: none;
+  display: flex;
+  column-gap: 5px;
+}
+
+li.brand_item div.list_models button {
+  width: 30px;
+  height: 30px;
+}
+
+li.brand_item div.add_model {
+  background: var(--background-color);
+  height: 50px;
+  padding: 10px 0;
+}
+
+li.brand_item div.add_model button {
+  width: 150px;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  background: transparent;
+}
+
+li.brand_item div.add_model button:hover {
+  color: var(--primary-color);
+}
+
+li.brand_item div.add_model button img,
+li.brand_item div.add_model button:hover img {
+  filter: invert(7%) sepia(86%) saturate(5803%) hue-rotate(358deg)
+    brightness(92%) contrast(107%) !important;
+}

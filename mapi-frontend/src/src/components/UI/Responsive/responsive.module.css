@@ -1,0 +1,56 @@
+article.responsive {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  row-gap: 40px;
+  text-align: center;
+}
+
+article.responsive > img {
+  justify-self: center;
+}
+
+article.responsive section {
+  background: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  row-gap: 32px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+article.responsive section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+article.responsive section p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+article.responsive section img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1250px) {
+  article.responsive section {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  article.responsive {
+    display: none;
+  }
+}

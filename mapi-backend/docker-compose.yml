@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  server:
+    environment:
+      - NODE_ENV=local
+    hostname: mapi_server
+    container_name: mapi_server
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      target: base
+    ports:
+      - 4002:4002
+    command: >
+      sh -c "npm run dev"
+    volumes:
+      - ./src/src:/app/src
+
+  mapi_db:
+    image: mariadb:11.2.2
+    hostname: mapi_db
+    container_name: mapi_db
+    restart: unless-stopped
+    env_file:
+      - src/local.env
+    volumes:
+      - ./dbdata:/var/lib/mysql
+    ports:
+      - 3309:3306
+
+  mapi_db_client:
+    image: mariadb:11.2.2
+    hostname: mapi_db_client
+    container_name: mapi_db_client
+    restart: unless-stopped
+    env_file:
+      - src/client.env
+    volumes:
+      - ./client_dbdata:/var/lib/mysql
+    ports:
+      - 3310:3306

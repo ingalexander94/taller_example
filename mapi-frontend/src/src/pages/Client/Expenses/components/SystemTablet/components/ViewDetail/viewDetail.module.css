@@ -1,0 +1,333 @@
+article.container_modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: end;
+  z-index: 1;
+}
+
+article.container_modal div.overlay {
+  background: rgba(40, 40, 40, 0.8);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+article.container_modal div.content_modal {
+  display: flex;
+  flex-direction: column;
+  background: var(--white-color);
+  width: 500px;
+  border-radius: 5px 0px 0px 5px;
+  padding: 20px 25px;
+  z-index: 0;
+  text-align: center;
+  row-gap: 5px;
+}
+article.container_modal div.content_modal {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+article.container_modal div.content_modal h3 {
+  font-size: 24px;
+  color: var(--color-text);
+}
+
+article.container_modal div.content_modal .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  position: relative;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--disabled-color);
+  padding-bottom: 20px;
+}
+
+article.container_modal div.content_modal button.close_button {
+  width: 20px;
+  background-color: transparent;
+  left: 0;
+  position: absolute;
+}
+
+article.container_modal div.content_modal section {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  padding: 15px 10px;
+}
+
+article.container_modal div.content_modal section.section_info {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_info
+  div.content_info {
+  background-color: var(--white-color);
+  border-radius: 4px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  padding: 20px;
+}
+
+article.container_modal div.content_modal section.section_info div div.info {
+  display: flex;
+  flex-direction: column;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_info
+  div.content_info
+  div.info_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_info
+  div.content_info
+  div.info_left
+  div.bar {
+  width: 2px;
+  height: 75px;
+  background: red;
+}
+
+article.container_modal div.content_modal section.section_info div div.info {
+  row-gap: 20px;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_info
+  div
+  div.info
+  div {
+  display: flex;
+  flex-direction: column;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_general
+  div.content_general {
+  background-color: var(--white-color);
+  border-radius: 4px;
+}
+
+article.container_modal div.content_modal section.section_general {
+  margin-bottom: 10px;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_general
+  div.content_general {
+  width: 100%;
+}
+
+article.container_modal div.content_modal section label {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+}
+article.container_modal div.content_modal section label::after {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 20px;
+  transform: rotate(90deg);
+  background-image: url("/src/assets/icons/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 10px;
+  top: 7px;
+  transition: 0.5s;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_general
+  div.content_general {
+  display: flex;
+  flex-direction: row;
+}
+
+article.container_modal div.content_modal section.section_general ul {
+  text-align: left;
+  width: 100%;
+}
+
+article.container_modal div.content_modal section.section_general ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  border-bottom: 1px solid var(--disabled-color);
+  font-size: 14px;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_general
+  ul
+  li:nth-child(5) {
+  border-bottom: none;
+}
+
+article.container_modal div.content_modal section label ul li:nth-child(5) {
+  border-bottom: none;
+}
+
+article.container_modal div.content_modal section.section_general ul.left {
+  width: 150px;
+  font-weight: 700;
+}
+
+article.container_modal div.content_modal section.section_general ul.left li {
+  height: 40px;
+}
+
+article.container_modal div.content_modal section.section_general ul.right li {
+  height: 40px;
+}
+
+section.section_general input[type="checkbox"] {
+  display: none;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_general
+  div.content_general
+  ul {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+#general:checked ~ div ul {
+  height: 100%;
+}
+
+#general:checked ~ div {
+  padding: 8px 10px;
+}
+
+#general:checked ~ label::after {
+  transform: rotate(-90deg);
+  top: -5px;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_operating
+  div.content_operating {
+  background: var(--white-color);
+  border-radius: 4px;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_operating
+  div.content_operating {
+  display: flex;
+  flex-direction: row;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_operating
+  div.content_operating
+  ul {
+  text-align: left;
+  width: 100%;
+}
+article.container_modal
+  div.content_modal
+  section.section_operating
+  div.content_operating
+  ul
+  li:nth-child(1) {
+  border-bottom: 1px solid var(--disabled-color);
+}
+
+article.container_modal
+  div.content_modal
+  section.section_operating
+  div.content_operating
+  ul.operating_right
+  li {
+  height: 40px;
+  padding: 10px;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_operating
+  div.content_operating
+  ul.operating_right
+  li:nth-child(1) {
+  font-weight: 700;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_operating
+  div.content_operating
+  ul.operating_left
+  li {
+  height: 40px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+section.section_operating input[type="checkbox"] {
+  display: none;
+}
+
+article.container_modal
+  div.content_modal
+  section.section_operating
+  div.content_operating
+  ul {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  row-gap: 4px;
+  font-size: 14px;
+}
+
+#operating:checked ~ div ul {
+  height: 100%;
+}
+
+#operating:checked ~ div {
+  padding: 8px 10px;
+}
+
+#operating:checked ~ label::after {
+  transform: rotate(-90deg);
+  top: -5px;
+}

@@ -1,0 +1,103 @@
+article.temporary {
+  background: var(--white-color);
+  border-radius: 10px;
+  padding: 5px 24px 16px 24px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+article.temporary nav.nav_temporary {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-text);
+  margin-bottom: 12px;
+}
+
+article.temporary nav.nav_temporary ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+article.temporary nav.nav_temporary ul li a.active {
+  color: var(--text-color);
+  font-weight: 700;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+article.temporary nav.nav_temporary ul li a {
+  color: var(--gray-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+article.temporary div.operations_wrapper {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 344px 1fr;
+  column-gap: 11px;
+  min-height: calc(100% - 100px);
+}
+
+article.temporary div.operations_wrapper > aside {
+  display: none;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  flex-direction: column;
+  place-items: center;
+  text-align: center;
+  margin: 0 auto;
+  row-gap: 26px;
+  width: 600px;
+  align-self: center;
+  justify-content: center;
+}
+
+article.temporary div.operations_wrapper > aside h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+article.temporary div.operations_wrapper > aside p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+article.temporary div.operations_wrapper > aside img {
+  object-fit: contain;
+}
+
+article.temporary div.operations_wrapper > aside button {
+  width: 200px;
+  height: 50px;
+}
+
+article.temporary div.operations_wrapper > aside button img {
+  width: 20px;
+  height: 20px;
+}
+
+article.temporary div.operations_wrapper > aside:only-child {
+  display: flex;
+}
+
+article.temporary div.operations_wrapper > section {
+  border-radius: 5px;
+  border: 1px solid var(--disabled-color);
+}
+
+@media screen and (max-width: 1500px) {
+  article.temporary div.operations_wrapper {
+    grid-template-columns: 320px 1fr;
+  }
+
+  article.temporary div.operations_wrapper > aside > img {
+    width: 450px;
+  }
+}

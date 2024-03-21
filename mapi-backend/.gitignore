@@ -1,0 +1,17 @@
+.env
+.env.development
+node_modules
+.vscode
+.DS_Store
+
+# terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+terraform/ec2/ssh-keys/wiedii-dev.pem
+terraform/ec2/ssh-keys/wiedii-dev.pub
+
+
+# local database
+dbdata
+client_dbdata

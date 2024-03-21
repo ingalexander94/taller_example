@@ -1,0 +1,51 @@
+article.settings {
+  width: 100%;
+  margin: 20px auto;
+}
+
+article.settings section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+article.settings section h3 {
+  text-align: center;
+  font-size: 24px;
+}
+
+article.settings section div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 20px 0;
+}
+
+article.settings section div fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+article.settings section div fieldset label {
+  font-size: 18px;
+}
+
+article.settings section div fieldset select {
+  border: 2px solid var(--text-color);
+  appearance: none;
+  font-size: 16px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  background: var(--white);
+}
+
+@media screen and (min-width: 500px) {
+  article.settings {
+    width: 500px;
+  }
+}

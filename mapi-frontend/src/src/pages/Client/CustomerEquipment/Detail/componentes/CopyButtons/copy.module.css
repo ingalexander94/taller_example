@@ -1,0 +1,39 @@
+span.copy {
+  cursor: pointer;
+}
+
+span.copy_btn {
+  position: relative;
+}
+
+span.badge {
+  position: absolute;
+  visibility: hidden;
+  width: 73px;
+  height: 27px;
+  border-radius: 4px;
+  background: var(--white-color);
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 16px;
+  text-align: left;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -35px;
+  left: -30px;
+  box-shadow: 0px 0px 20px 0px #89939e33;
+}
+
+span.badge::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--white-color);
+  bottom: -5px;
+  transform: rotate(45deg);
+}

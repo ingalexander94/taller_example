@@ -1,0 +1,360 @@
+article.container_modal {
+  position: fixed;
+  background: rgba(40, 40, 40, 0.8);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  display: grid;
+  z-index: 10;
+  place-content: center;
+}
+
+article.container_modal div.modal {
+  width: 800px;
+  border-radius: 5px;
+  background: var(--white-color);
+  z-index: 10;
+  padding: 50px;
+}
+
+article.container_modal div.modal div.formGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+
+article.container_modal label {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+article.container_modal input {
+  font-size: 12px;
+}
+
+article.container_modal .formColumn input {
+  font-size: 12px;
+  color: var(--black-color);
+}
+
+article.container_modal .formColumn input[type="checkbox"] {
+  display: none;
+}
+
+article.container_modal .formColumn input[type="checkbox"]:checked ~ ul {
+  height: fit-content;
+  overflow-y: scroll;
+  max-height: 305px;
+  display: flex;
+}
+
+article.container_modal .formColumn > ul {
+  background: var(--white-color);
+  border: 2px solid var(--background-color);
+  border-radius: 4px;
+  padding: 12px;
+  display: none;
+  flex-direction: column;
+  width: 350px;
+  position: absolute;
+  top: 55px;
+  z-index: 20;
+  height: 0;
+  row-gap: 10px;
+}
+
+article.container_modal .formColumn > ul span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+article.container_modal .formColumn > ul li label {
+  display: flex;
+  column-gap: 10px;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+article.container_modal .formColumn > ul li div {
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-image: url("../../../../../../assets/icons/unchecked.svg");
+}
+
+article.container_modal .formColumn > ul li input[type="radio"] {
+  display: none;
+}
+
+article.container_modal .formColumn > ul li input[type="radio"]:checked ~ div {
+  background-image: url("../../../../../../assets/icons/checked.svg");
+}
+
+article.container_modal .formColumn > ul > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  padding: 0 10px;
+}
+
+article.container_modal .formColumn > ul > div li label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+article.container_modal .formColumn > ul > li label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+article.container_modal .formColumn label.select.disabled {
+  pointer-events: none;
+  background-color: var(--background-color);
+}
+
+article.container_modal .formColumn label.select {
+  border: 1px solid var(--disabled-color);
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 0;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--black-color);
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  background-image: url("../../../../../../assets/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 98%;
+  background-size: 10px;
+}
+
+article.container_modal div.timer > div {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+article.container_modal div.timer > div div {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+article.container_modal div.timer > div div span {
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  color: var(--disabled-color);
+  pointer-events: none;
+  background: var(--white-color);
+  padding-left: 5px;
+}
+
+article.container_modal div.timer > div div input::-webkit-outer-spin-button,
+article.container_modal div.timer > div div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+article.container_modal div.timer > div div input[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+article.container_modal .formColumn select {
+  border-color: var(--gray-text);
+  border-radius: 4px;
+}
+
+article.container_modal .formColumn {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  position: relative;
+}
+
+article.container_modal .formColumn label {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+article.container_modal .formColumn > span {
+  color: var(--primary-color);
+  min-height: 10px;
+  font-size: 10px;
+}
+
+article.container_modal .formColumn label span {
+  color: var(--primary-color);
+}
+
+article.container_modal .number_total {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--disabled-color);
+}
+
+article.container_modal div.modal h2 {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+article.container_modal section div hr {
+  margin-bottom: 40px;
+}
+
+article.container_modal .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+article.container_modal div form .textarea {
+  width: 100%;
+  height: 130px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+article.container_modal .line_body {
+  margin-bottom: 30px;
+}
+
+article.container_modal div form .input,
+.select {
+  width: 100%;
+  height: 35px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+article.container_modal div form .input.text_right {
+  text-align: right;
+}
+
+article.container_modal select.select:hover {
+  border-color: var(--hover-red-color);
+}
+
+article.container_modal .formButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 50px;
+}
+
+article.container_modal .formButtons button {
+  width: 200px;
+}
+
+article.container_modal div.wrapper_models {
+  border-radius: 4px;
+  border: 1px solid var(--disabled-color);
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+article.container_modal div.wrapper_models div.item_model {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+  width: max-content;
+  padding: 6px;
+  background: var(--error-color);
+  min-width: 70px;
+  color: var(--white-color);
+  border-radius: 4px;
+  cursor: default;
+}
+
+article.container_modal div.wrapper_models div.item_model span {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+article.container_modal div.wrapper_models div.item_model button {
+  background: none;
+  width: 20px;
+  height: 20px;
+}
+
+article.container_modal div.wrapper_models input {
+  background: transparent;
+  padding: 4px 0;
+  border: none;
+  outline: none;
+  flex: 1;
+  color: var(--black-color);
+}
+
+article.container_modal div.wrapper_models div.model_options {
+  position: relative;
+}
+
+article.container_modal div.wrapper_models div.model_options ul {
+  position: absolute;
+  top: 40px;
+  border-radius: 4px;
+  padding: 12px;
+  border: 2px solid var(--background-color);
+  background: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  width: max-content;
+}
+
+article.container_modal div.wrapper_models div.model_options ul li {
+  overflow: hidden;
+  color: var(--black-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+article.container_modal div.wrapper_models div.model_options ul li:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1500px) {
+  article.container_modal div.modal {
+    height: 90vh;
+    overflow-y: scroll;
+  }
+}

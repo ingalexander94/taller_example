@@ -1,0 +1,108 @@
+section.wordorders_filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  column-gap: 20px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+section.wordorders_filter div.select_equip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+section.wordorders_filter > div p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+section.wordorders_filter > div ul {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding: 10px;
+  background: var(--background-color);
+  max-width: 100%;
+  border-radius: 4px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
+}
+
+section.wordorders_filter > div button:nth-child(1) img.arrow {
+  transform: rotate(90deg);
+}
+
+section.wordorders_filter > div button:nth-child(3) img.arrow {
+  transform: rotate(-90deg);
+}
+
+section.wordorders_filter > div ul::-webkit-scrollbar {
+  display: none;
+}
+
+section.wordorders_filter > div ul li {
+  padding: 5px 10px;
+  font-size: 14px;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  font-weight: 400;
+  scroll-snap-align: start;
+  border-radius: 4px;
+  line-height: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+section.wordorders_filter > div ul li.active {
+  background: var(--white-color);
+  border-radius: 5px;
+}
+
+section.wordorders_filter div.content_filter {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  justify-items: end;
+  align-items: center;
+  gap: 10px;
+}
+
+section.wordorders_filter div.content_filter div.input_order {
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1.5px solid var(--black-color);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+}
+section.wordorders_filter div.content_filter div.input_order select {
+  border: none;
+  outline: none;
+}
+
+section.wordorders_filter div.content_filter div.btn_register button:active {
+  transform: scale(0.8);
+}
+
+section.wordorders_filter div.content_filter div.btn_register button {
+  height: 40px;
+  width: 168px;
+}
+
+section.wordorders_filter div.content_filter div.btn_register button img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}

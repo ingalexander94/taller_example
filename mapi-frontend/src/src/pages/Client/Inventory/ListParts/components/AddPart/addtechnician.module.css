@@ -1,0 +1,182 @@
+article.container_modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-content: center;
+}
+
+label,
+input {
+  font-size: 12px;
+}
+
+label {
+  font-weight: 700;
+}
+
+.hidden {
+  display: none !important;
+}
+
+li.listIcons {
+  display: grid;
+  place-content: center;
+}
+
+article.container_modal div.overlay {
+  background: rgba(40, 40, 40, 0.8);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.formGroup label {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.formGroup input {
+  font-size: 12px;
+}
+
+.formColumn input {
+  font-size: 12px;
+}
+
+.formColumn {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.formColumn label {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+article.container_modal div.modal {
+  width: 800px;
+  border-radius: 5px;
+  background: var(--white-color);
+  z-index: 1000;
+  padding: 50px;
+}
+
+article.container_modal div.modal h2 {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+article.container_modal section div hr {
+  margin-bottom: 40px;
+}
+
+.form {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  color: black !important;
+}
+
+.line_body {
+  margin-bottom: 30px;
+}
+
+select.select:hover {
+  border-color: var(--hover-red-color);
+}
+
+.formButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 50px;
+}
+button.btn_cancel:hover {
+  background: var(--background-color);
+  cursor: pointer;
+}
+
+.btn_cancel {
+  display: flex;
+  width: 190px;
+  height: 50px;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 2px solid var(--black-color);
+  background: var(--white-color);
+  color: var(--black-color);
+}
+.btn_keep {
+  display: flex;
+  width: 190px;
+  height: 50px;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btn_keep > img {
+  animation: infiniteRotate 2s infinite;
+}
+
+article.container_modal div.modal form.form div.content_form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 5px;
+}
+
+article.container_modal div.modal form.form div div.formColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+article.container_modal div.modal form.form div div.formColumn:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+article.container_modal div.modal form.form div div.formColumn input {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid var(--disabled-color);
+}
+
+article.container_modal
+  div.modal
+  form.form
+  div
+  div.formColumn
+  input.input_dark {
+  background: #f4f4f4;
+}
+article.container_modal
+  div.modal
+  form.form
+  div
+  div.formColumn
+  input.input_dark {
+  text-align: left;
+}

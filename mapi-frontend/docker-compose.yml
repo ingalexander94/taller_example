@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  client:
+    container_name: react
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3003:80

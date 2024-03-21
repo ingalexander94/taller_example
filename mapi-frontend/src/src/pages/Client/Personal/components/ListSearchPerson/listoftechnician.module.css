@@ -1,0 +1,130 @@
+section.list_system {
+  padding: 32px;
+}
+
+section.list_system div.system_actions,
+section.list_system div.system_actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+}
+
+section.list_system div.system_actions button.search_icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: none;
+  right: 10px;
+  pointer-events: none;
+}
+
+div.list_actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+section.list_system div.system_actions button.search_icon.active {
+  pointer-events: all;
+}
+
+section.list_system div.system_actions p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  max-width: 230px;
+}
+
+section.list_system div.system_actions button {
+  height: 30px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  padding: 0 10px;
+  line-height: 12px;
+}
+
+section.list_system div.system_actions button img {
+  height: 18px;
+  width: 18px;
+  object-fit: contain;
+}
+
+section.list_system div.system_actions input {
+  height: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  padding-left: 10px;
+  padding-right: 35px;
+  min-width: 210px;
+}
+
+section.list_system div.input_search {
+  display: flex;
+  position: relative;
+  column-gap: 19px;
+  align-items: center;
+}
+
+section.list_system div.input_search p {
+  width: fit-content;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+section.list_system div.input_search input {
+  width: 370px;
+}
+.list_actions a {
+  background: var(--black-color);
+  gap: 5px;
+  display: flex;
+  width: 141px;
+  font-size: 12px;
+  border: 2px solid var(--black-color);
+  padding: 0 5px;
+  align-items: center;
+  color: var(--white-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.list_actions a:hover {
+  background: var(--white-color);
+  color: var(--gray-color);
+}
+
+@media screen and (max-width: 1450px) {
+  section.list_system div.system_actions input {
+    color: transparent;
+    background-position: 50%;
+    cursor: pointer;
+  }
+
+  section.list_system div.system_actions button.search_icon {
+    width: 16px;
+    height: 16px;
+    right: 5px;
+  }
+
+  section.list_system div.system_actions input:focus {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 30px;
+    color: var(--text-color);
+  }
+
+  section.list_system div.system_actions input:focus::placeholder {
+    color: var(--disabled-color);
+  }
+
+  section.list_system
+    div.system_actions
+    input:focus
+    ~ button:not(.search_icon) {
+    display: none;
+  }
+}

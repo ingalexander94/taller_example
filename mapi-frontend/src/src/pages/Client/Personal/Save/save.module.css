@@ -1,0 +1,246 @@
+.container_create_person {
+  border-radius: 10px;
+  background: var(--Neutral-White, #fff);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  padding: 50px;
+}
+.container_create_persons {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  column-gap: 30px;
+}
+.add_person_wrapper img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.form_groupp {
+  display: flex;
+  flex-direction: column;
+}
+#errores {
+  position: relative;
+  top: 24px;
+  right: 10px;
+}
+.select_options select {
+  width: 100%;
+  height: 35px;
+  border: 1px solid var(--disabled-color);
+  border-radius: 4px;
+  color: var(--disabled-color);
+}
+.select_options select option {
+  display: flex;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--gray-color);
+}
+
+.add_person_wrapper h2 {
+  font-size: 16px;
+}
+.add_person_wrapper {
+  border: 1px solid var(--disabled-color);
+  display: flex;
+  padding: 37px;
+  text-align: center;
+  gap: 20px;
+  flex-direction: column;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  height: 440px;
+}
+.form_groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--disabled-color);
+  height: 135px;
+  padding: 4px 11px;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.form_groups {
+  grid-row: span 2;
+  grid-column: 1;
+}
+
+.update_password {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-bottom: 1px solid var(--disabled-color);
+  height: 40px;
+}
+
+.update_password label {
+  position: relative;
+  top: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.form_content {
+  border: 1px solid var(--disabled-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 55px 38px;
+  gap: 10px;
+  border-radius: 4px;
+}
+.form_groups label {
+  text-align: center;
+}
+.form_groups img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.conditions_password h3 {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.conditions_password ul li {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--gray-color);
+}
+.photo_section h2 {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.form_section h2 {
+  position: absolute;
+  padding: 18px 40px;
+  font-size: 16px;
+}
+.form_groups {
+  position: relative;
+}
+
+.error.errorText {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.required {
+  color: var(--primary-color);
+  font-size: 15px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.content_documents h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+.add_person_wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: justify;
+  padding: 10px;
+}
+.add_person_wrapper label h3 {
+  font-weight: 500;
+}
+.content_edit_user {
+  border-bottom: 1px solid var(--disabled-color);
+}
+
+.content_edit_user img {
+  width: 60px;
+  height: 60px;
+}
+
+#buttons_delete {
+  border: 2px solid var(--disabled-color);
+  height: 30px;
+  font-size: 10px;
+}
+form.form_group label {
+  margin-bottom: 10px;
+}
+#buttons_add {
+  border: 2px solid var(--black-color);
+  border-radius: 4px;
+  height: 30px;
+  font-size: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.buttons_save_changes {
+  width: 160px;
+  height: 40px;
+  justify-self: flex-end;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  grid-column-end: 3;
+  float: right;
+  margin-top: 27px;
+}
+form.form_content input {
+  height: 35px;
+}
+
+.password_input_wrapper {
+  display: flex;
+}
+.password_input_wrapper img {
+  position: relative;
+  right: 33px;
+}
+.conditions_password {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: fit-content;
+  padding: 10px 20px;
+  gap: 12px;
+  box-shadow: 0px 0px 20px 0px rgba(137, 147, 158, 0.2);
+  border-radius: 10px;
+}
+.conditions_password h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.conditions_password ul li {
+  color: var(--disabled-color);
+  margin-bottom: 5px;
+}
+.conditions_password ul li.success {
+  color: var(--success-color);
+}
+
+.conditions_password ul li.error {
+  color: var(--primary-color);
+}
+
+.error {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.errorInput {
+  border: 1px solid red;
+}
+
+.errorText {
+  color: red;
+}

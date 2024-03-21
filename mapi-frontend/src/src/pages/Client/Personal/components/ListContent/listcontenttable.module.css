@@ -1,0 +1,187 @@
+div.table_system {
+  margin-top: 16px;
+}
+
+div.table_system ul {
+  grid-template-columns: 116px 262px 185px 187px 265px 230px 64px;
+}
+
+div.table_system div.table_header ul {
+  display: grid;
+  column-gap: 20px;
+  padding: 0 10px;
+}
+
+div.table_system div.table_header ul li {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  width: 100%;
+}
+
+div.table_system div.table_header ul li:nth-child(1) {
+  padding-right: 20px;
+}
+div.table_system div.table_content ul li:nth-child(5) strong {
+  text-align: right;
+}
+
+div.table_system div.table_content {
+  display: grid;
+  row-gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.system_list {
+  display: flex;
+  align-items: center;
+}
+.table_item {
+  pointer-events: none;
+}
+.buttons {
+  pointer-events: all;
+}
+
+div.table_system div.table_content div.table_item {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  overflow: hidden;
+}
+
+div.table_system div.table_content div.table_item input[type="checkbox"] {
+  display: none;
+}
+
+div.table_system div.table_content div.table_item > label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+div.table_system div.table_content div.table_item > label ul {
+  display: grid;
+  column-gap: 20px;
+  align-items: center;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4px;
+  border: 1px solid var(--disabled-color);
+  border-radius: 10px;
+}
+
+div.table_system div.table_content div.table_item > label ul:hover {
+  background: var(--background-color);
+}
+
+div.table_system div.table_content div.table_item > label ul li.show strong {
+  position: relative;
+}
+
+div.table_system div.table_content div.table_item > label ul li {
+  width: 100%;
+}
+
+div.table_system div.table_content div.table_item > label ul li img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+div.table_system div.table_content div.table_item > label ul li span {
+  display: block;
+  font-weight: 700;
+}
+
+div.table_system div.table_content div.table_item > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  display: none;
+  height: 0;
+}
+
+div.table_system div.table_content div.table_item > div div {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+div.table_system div.table_content div.table_item > div div p {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  max-width: 100px;
+}
+
+div.table_system div.table_content div.table_item > div div p span {
+  font-weight: 700;
+}
+.btn_edit {
+  width: 12px;
+  background: transparent;
+}
+.btn_edit_delete {
+  display: flex;
+}
+#btn_delete {
+  border: none;
+  border-radius: 20px;
+  height: 37px;
+}
+
+.table_content ul li {
+  display: flex;
+  align-items: center;
+}
+
+div.buttons {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+div.buttons img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+div.buttons button {
+  background: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+}
+div.buttons button:hover {
+  background: var(--white-color);
+}
+
+div.buttons button:nth-child(2) {
+  background: var(--error-color);
+}
+
+@media screen and (max-width: 1790px) {
+  div.table_system div.table_header ul li:nth-child(1) {
+    padding-right: 10px;
+  }
+  div.table_system ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 150px 75px;
+  }
+}

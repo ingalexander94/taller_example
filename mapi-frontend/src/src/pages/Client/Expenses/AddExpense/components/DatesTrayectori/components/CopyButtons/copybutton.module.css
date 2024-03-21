@@ -1,0 +1,25 @@
+div.content_button {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+div.content_button input {
+  width: 100%;
+}
+div.content_button button {
+  background: transparent;
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 8px;
+  right: 10px;
+}
+div.content_button button:hover {
+  background: none;
+}
+
+div.content_button input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

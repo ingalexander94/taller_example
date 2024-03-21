@@ -1,0 +1,111 @@
+form.edit_equipment {
+  border-radius: 10px 10px 0px 0px;
+  background: var(--white-color);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  padding: 40px 50px 40px 20px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  /* height: calc(100vh - 80px); */
+}
+
+form.edit_equipment .content_right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid var(--disabled-color);
+  border-radius: 5px;
+  padding: 20px;
+  /* height: calc(100vh - 120px); */
+}
+
+form.edit_equipment div.content_right div.list {
+  overflow: hidden;
+}
+
+form.edit_equipment .content_right ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+form.edit_equipment .content_right ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  color: var(--disabled-color);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+form.edit_equipment .content_right ul li.active {
+  color: var(--black-color);
+}
+
+form.edit_equipment div.content_right ul li strong {
+  font-size: 16px;
+}
+
+form.edit_equipment div.content_right div.content_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+form.edit_equipment div.content_right div.content_button div.prev_next {
+  display: flex;
+  gap: 15px;
+}
+
+form.edit_equipment div.content_right div.content_button button {
+  height: 40px;
+}
+
+form.edit_equipment
+  div.content_right
+  div.content_button
+  div.prev_next
+  button.hide {
+  border: 1px solid var(--disabled-color);
+  color: var(--disabled-color);
+  cursor: auto;
+}
+
+form.edit_equipment
+  div.content_right
+  div.content_button
+  div.prev_next
+  button.hide
+  img {
+  filter: invert(69%) sepia(17%) saturate(235%) hue-rotate(171deg)
+    brightness(82%) contrast(86%);
+}
+
+form.edit_equipment div.content_right div.content_button div.prev_next button {
+  font-weight: 700;
+  width: 130px;
+  background: var(--white-color);
+  color: var(--black-color);
+  border: 1.5px solid var(--black-color);
+  font-size: 14px;
+}
+
+form.edit_equipment
+  div.content_right
+  div.content_button
+  div.prev_next
+  button
+  img {
+  width: 18px;
+  height: 18px;
+}
+
+form.edit_equipment div.content_right div.content_button div.btn_save button {
+  width: 210px;
+  font-weight: 700;
+  font-size: 14px;
+}

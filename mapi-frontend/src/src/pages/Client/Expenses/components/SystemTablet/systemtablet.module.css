@@ -1,0 +1,83 @@
+div.table_system {
+  border: 1px solid var(--disabled-color);
+  border-radius: 5px;
+  padding: 20px 15px;
+}
+
+div.table_system ul {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+div.table_system div.table_header ul {
+  display: grid;
+  column-gap: 15px;
+  padding: 0 10px;
+}
+
+div.table_system div.table_header ul li {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  width: 100%;
+}
+
+div.table_system div.table_content {
+  display: grid;
+  row-gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.table_system div.table_content div.table_item {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 1px solid var(--disabled-color);
+  height: fit-content;
+  overflow: hidden;
+}
+
+div.table_system div.table_content div.table_item input[type="checkbox"] {
+  display: none;
+}
+
+div.table_system div.table_content div.table_item > :hover {
+  background: var(--background-color);
+}
+
+div.table_system div.table_content div.table_item > ul {
+  display: grid;
+  column-gap: 15px;
+  align-items: center;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+div.table_system div.table_content div.table_item > ul li {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+div.table_system div.table_content div.table_item > ul li {
+  width: 100%;
+  justify-content: center;
+  display: grid;
+}
+div.table_system div.table_content div.table_item > ul li button.btn_detail {
+  background: transparent;
+  border: 1.5px solid var(--black-color);
+  color: var(--black-color);
+  padding: 0 8px;
+  font-weight: 700;
+  font-size: 12px;
+  height: 30px;
+}

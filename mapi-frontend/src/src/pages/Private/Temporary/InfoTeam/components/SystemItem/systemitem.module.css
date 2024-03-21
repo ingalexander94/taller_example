@@ -1,0 +1,10 @@
+li.system_item {
+  display: grid;
+  grid-template-columns: 80px 1fr 120px;
+  column-gap: 14px;
+}
+
+li.system_item input.error {
+  background: var(--error-color);
+  border: none;
+}

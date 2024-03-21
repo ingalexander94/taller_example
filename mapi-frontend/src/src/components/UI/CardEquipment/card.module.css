@@ -1,0 +1,117 @@
+section.card {
+  width: 100%;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0px rgba(137, 147, 158, 0.4);
+  display: flex;
+  padding: 10px 10px 15px 10px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+section.card div.title_card {
+  width: 100%;
+  border-bottom: 0.5px solid var(--disabled-color);
+  padding-bottom: 4px;
+}
+
+section.card div.title_card h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+section.card div.title_card span {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+section.card > img {
+  max-width: 100%;
+  height: 200px;
+  align-self: stretch;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+section.card div.propertie_cart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.card div.propertie_cart > span {
+  height: 1px;
+  width: 30px;
+  background: var(--disabled-color);
+  transform: rotate(-70deg);
+}
+
+section.card div.propertie_cart strong {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+section.card div.propertie_cart div.cart_kilometries {
+  text-align: center;
+}
+
+section.card div.propertie_cart div.state {
+  text-align: right;
+}
+
+section.card div.propertie_cart strong.active {
+  color: var(--success-color);
+}
+
+section.card div.propertie_cart p {
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px;
+}
+
+section.card div.container_buttons {
+  display: grid;
+  margin-top: 15px;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  column-gap: 20px;
+  justify-content: space-between;
+}
+
+section.card div.container_buttons a {
+  height: 26px;
+  padding: 0px 6px 0px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+section.card div.container_buttons a.detailsButtonOnly {
+  column-gap: 4px;
+}
+
+section.card div.container_buttons a.detailsButtonOnly:only-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+section.card div.container_buttons a.detailsButtonOnly img {
+  height: 20px;
+  width: 20px;
+}

@@ -1,0 +1,295 @@
+section.list_components {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 12px;
+}
+
+section.list_components > div.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 10px;
+}
+
+section.list_components > div.actions p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+section.list_components > div.actions button {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0 10px;
+  line-height: 12px;
+  height: 30px;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+section.list_components > ul.components {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  height: 100%;
+}
+
+section.list_components > ul.components section {
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 26px;
+  height: 100%;
+}
+
+section.list_components > ul.components section:last-child {
+  display: flex;
+}
+
+section.list_components > ul.components section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+section.list_components > ul.components section p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+section.list_components > ul.components section button {
+  width: 180px;
+  height: 40px;
+}
+
+section.list_components > ul.components div.buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding-right: 20px;
+}
+
+section.list_components > ul.components div.buttons button {
+  background: var(--white-color);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+}
+
+section.list_components > ul.components div.buttons button:nth-child(2) {
+  background: var(--error-color);
+}
+
+section.list_components > ul.components div.buttons button img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+section.list_components > ul.components > div {
+  border-radius: 5px;
+  border: 1px solid var(--background-color);
+  overflow: hidden;
+}
+
+section.list_components > ul.components > div label {
+  background: var(--background-color);
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  min-height: 40px;
+}
+
+section.list_components > ul.components > div label.dropdown {
+  cursor: pointer;
+}
+
+section.list_components > ul.components > div label button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  width: fit-content;
+  color: var(--black-color);
+  height: 24px;
+  padding: 0 8px;
+  background: var(--white-color);
+  border-radius: 4px;
+}
+
+section.list_components > ul.components > div label.dropdown::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  transform: rotate(90deg);
+  background-image: url("../../../../../../assets/icons/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 10px;
+  top: 18px;
+  transition: 0.5s;
+}
+
+section.list_components > ul.components > div input[type="checkbox"] {
+  display: none;
+}
+
+section.list_components > ul.components > div ul {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  row-gap: 8px;
+  background: var(--background-color);
+}
+
+section.list_components > ul.components > div ul li img {
+  width: 15px;
+}
+
+section.list_components > ul.components > div ul li img.models_time {
+  filter: invert(9%) sepia(85%) saturate(6253%) hue-rotate(359deg)
+    brightness(118%) contrast(113%);
+}
+
+section.list_components > ul.components li.active img {
+  background: var(--white-color);
+  border-radius: 50%;
+}
+
+section.list_components > ul.components li.active {
+  background-color: var(--black-color) !important;
+  border-radius: 5px;
+  cursor: default;
+  color: var(--white-color);
+  background-image: url("../../../../../../assets/icons/arrow-white.svg");
+  background-size: 12px;
+  background-position: 99%;
+}
+
+section.list_components > ul.components li:not(.active):hover {
+  box-shadow: 0px 0px 20px 0px rgba(137, 147, 158, 0.2);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+section.list_components > ul.components > p {
+  font-size: 14px;
+  min-height: 40px !important;
+}
+
+section.list_components > ul.components li {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  column-gap: 10px;
+  padding: 4px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  background-image: url("../../../../../../assets/icons/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 6px;
+  background-position: 98% center;
+  position: relative;
+  background-color: var(--white-color);
+  border-radius: 4px;
+}
+
+section.list_components > ul.components li p {
+  line-height: 30px;
+}
+
+section.list_components > ul.components li img {
+  cursor: pointer;
+}
+
+section.list_components > ul.components li > div {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background: var(--white-color);
+  color: var(--black-color);
+  height: fit-content;
+  left: 345px;
+  /* margin-top: 4px; */
+  border-radius: 4px;
+  /* padding: 12px; */
+  height: 0;
+  overflow: hidden;
+}
+
+section.list_components > ul.components li > div p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+section.list_components > ul.components li.active {
+  background-color: var(--background-color);
+}
+
+section.list_components > ul.components li span {
+  position: absolute;
+  color: var(--white-color);
+  text-align: center;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  left: 13px;
+  top: 12px;
+  width: 19px;
+}
+
+section.list_components > ul.components > li {
+  border-radius: 5px;
+  border: 1px solid var(--disabled-color);
+  background-position: 95% center;
+}
+
+section.list_components > ul.components > li div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+section.list_components
+  > ul.components
+  div.brand_item
+  input[type="checkbox"]:checked
+  ~ label.dropdown
+  ~ ul {
+  height: 100%;
+  padding: 4px 10px;
+  padding-top: 8px;
+}
+
+section.list_components
+  > ul.components
+  div.brand_item
+  input[type="checkbox"]:checked
+  ~ label.dropdown {
+  border-bottom: 1px solid var(--background-color);
+}
