@@ -1,13 +1,62 @@
 li.component_item {
   display: grid;
   column-gap: 14px;
-  grid-template-columns: 100px 1fr 140px;
+  grid-template-columns: 100px 1fr 140px 330px;
   align-items: center;
-  padding: 12px 0 0 0;
+  padding: 12px 0;
   border-radius: 10px;
-  border: 1px solid var(--disabled-color);
   position: relative;
   overflow: hidden;
+  background: var(--background-color);
+}
+
+li.component_item input[type="checkbox"] {
+  display: none;
+}
+
+li.component_item section {
+  display: none;
+}
+
+li.component_item input[type="checkbox"]:checked ~ section {
+  display: block;
+}
+
+li.component_item input[type="checkbox"]:checked ~ div label img {
+  transform: rotate(-180deg);
+}
+
+li.component_item label {
+  border: 1.5px solid var(--black-color);
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  padding: 0 8px;
+  cursor: pointer;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  width: 100px;
+  text-align: center;
+  background: var(--white-color);
+}
+
+li.component_item label:hover {
+  background: var(--background-color);
+}
+
+li.component_item label img {
+  transition: 0.5s;
+}
+
+li.component_item section {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
 
 li.component_item div.add_button {
@@ -18,20 +67,16 @@ li.component_item div.add_button {
   align-items: center;
   grid-column-start: 1;
   grid-column-end: 5;
-  height: 50px;
+  height: 40px;
 }
 
 li.component_item div.add_button button {
-  width: 150px;
+  width: 140px;
   font-size: 10px;
   font-weight: 700;
   line-height: 12px;
-  height: 30px !important;
-  background: transparent;
-}
-
-li.component_item div.add_button button img {
-  filter: brightness(0) saturate(100%) !important;
+  height: 30px;
+  margin-top: 12px;
 }
 
 li.component_item input {
@@ -67,8 +112,13 @@ li.component_item p {
   line-height: 14px;
 }
 
-li.component_item > div > button {
+li.component_item > div {
   margin-right: 14px;
+}
+
+li.component_item > div > button img {
+  width: 18px;
+  height: 18px;
 }
 
 li.component_item > div {
@@ -87,12 +137,21 @@ li.component_item > div button {
   line-height: 12px;
 }
 
+li.component_item > div button:nth-child(1) {
+  width: 160px;
+}
+
+li.component_item > div button:nth-child(2) {
+  width: 140px;
+}
+
 li.component_item div.list_systems {
-  margin: 14px 0;
+  margin: 14px 14px 0 14px;
   background: var(--white-color);
   grid-column-start: 1;
   grid-column-end: 5;
-  padding: 14px 75px;
+  padding: 12px;
+  border-radius: 4px;
 }
 
 li.component_item div.empty {

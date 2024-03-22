@@ -10,6 +10,7 @@ import deleteIcon from "src/assets/icons/delete.svg";
 import filterIcon from "src/assets/icons/filter-black.svg";
 import kilometres from "src/assets/icons/kilometres.svg";
 import hours from "src/assets/icons/time.svg";
+import arrowIcon from "src/assets/icons/arrow.svg";
 import styles from "./systemtablet.module.css";
 import AddOperationModal from "../AddOperationModal";
 import { Operation } from "src/interfaces";
@@ -111,7 +112,13 @@ const SystemTablet = () => {
                       <strong>{operation.code}</strong>
                     </li>
                     <li>
-                      <p>{operation.operation_description}</p>
+                      <p>
+                        {operation.operation_description} Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Harum consequatur
+                        amet molestiae saepe minima accusamus, ad voluptatem
+                        sequi, culpa neque explicabo eum! Quidem ut dignissimos
+                        possimus saepe molestias, eum voluptates!
+                      </p>
                     </li>
                     <li>
                       <strong>
@@ -147,7 +154,6 @@ const SystemTablet = () => {
                     </li>
                     <li className={styles.show}>
                       <p>{formatCurrency(operation.operation_total ?? 0)}</p>
-                      <strong>Ver</strong>
                     </li>
                     <div className={styles.buttons}>
                       <button
@@ -157,9 +163,13 @@ const SystemTablet = () => {
                         <img src={editIcon} alt="edit icon" />
                       </button>
                       <button
+                        className="btn_red"
                         onClick={() => showDelete(operation.id_operation)}
                       >
                         <img src={deleteIcon} alt="delete icon" />
+                      </button>
+                      <button className="btn_secondary">
+                        <img src={arrowIcon} alt="Show icon" />
                       </button>
                     </div>
                   </ul>

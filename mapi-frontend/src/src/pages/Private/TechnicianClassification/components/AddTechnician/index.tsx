@@ -6,21 +6,23 @@ import {
   ChangeEvent,
   useContext,
 } from "react";
-import Mechanics from "src/assets/icons/Mechanics.svg";
-import Electricity from "src/assets/icons/Electricity.svg";
-import Blacks from "src/assets/icons/Blacks.svg";
-import Motor from "src/assets/icons/Motor.svg";
-import Arrow from "src/assets/icons/arrow.svg";
-import Loading from "src/assets/icons/loading.svg";
-import styles from "./addtechnician.module.css";
 import { useFormik } from "formik";
-
 import InputTechnicianCode from "./components/InputTechnicianCode";
 import InputTechnicianName from "./components/InputTechnicianName";
 import { AddTechnicianValidatorForm } from "src/validators";
 import { TechnicianService } from "src/services/technician.service";
 import { useFetch } from "src/hooks";
 import { UIContext } from "src/context";
+import Mechanics from "src/assets/icons/Mechanics.svg";
+import Electricity from "src/assets/icons/Electricity.svg";
+import Blacks from "src/assets/icons/Blacks.svg";
+import Motor from "src/assets/icons/Motor.svg";
+import Rims from "src/assets/icons/Rims.svg";
+import Paint from "src/assets/icons/Paint.svg";
+import External from "src/assets/icons/External.svg";
+import Arrow from "src/assets/icons/arrow.svg";
+import Loading from "src/assets/icons/loading.svg";
+import styles from "./addtechnician.module.css";
 
 type Props = {
   closeModal: () => void;
@@ -181,16 +183,36 @@ const AddTechnician = ({ closeModal, title, technicianId }: Props) => {
               </label>
               <ul onClick={handleIcon} ref={selectImageRef}>
                 <li className={styles.listIcons}>
-                  <img src={Motor} style={{ width: "20px" }} alt="" />
+                  <img src={Motor} style={{ width: "20px" }} alt="Motor icon" />
+                  Motores
                 </li>
                 <li className={styles.listIcons}>
-                  <img src={Blacks} alt="" />
+                  <img src={Blacks} alt="Hidráulico icon" />
+                  Hidráulico
                 </li>
                 <li className={styles.listIcons}>
-                  <img style={{ width: "20px" }} src={Mechanics} alt="" />
+                  <img
+                    style={{ width: "20px" }}
+                    src={Mechanics}
+                    alt="Mechanic icon"
+                  />
+                  Mecánico de Patio
                 </li>
                 <li className={styles.listIcons}>
-                  <img src={Electricity} alt="" />
+                  <img src={Electricity} alt="Electricity icon" />
+                  Electricista
+                </li>
+                <li className={styles.listIcons}>
+                  <img src={Rims} alt="Rims icon" />
+                  Llantas
+                </li>
+                <li className={styles.listIcons}>
+                  <img src={Paint} alt="Pain icon" />
+                  Pintura
+                </li>
+                <li className={styles.listIcons}>
+                  <img src={External} alt="External icon" />
+                  Mano de obra externa
                 </li>
               </ul>
             </div>

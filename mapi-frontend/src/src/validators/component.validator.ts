@@ -49,8 +49,9 @@ export class ComponentValidatorForm {
                           index
                         ].component_systems.filter(
                           (system: System) =>
+                            system.system_code &&
                             system.system_code.toLowerCase() ===
-                            value.toLowerCase()
+                              value.toLowerCase()
                         ).length < 2
                       );
                     } else {

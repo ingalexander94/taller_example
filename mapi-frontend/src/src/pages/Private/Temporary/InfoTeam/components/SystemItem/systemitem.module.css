@@ -1,7 +1,20 @@
 li.system_item {
   display: grid;
-  grid-template-columns: 80px 1fr 120px;
+  grid-template-columns: 80px 1fr 150px;
   column-gap: 14px;
+}
+
+li.system_item button {
+  height: 30px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  text-align: center;
+}
+
+li.system_item button img {
+  width: 18px;
+  height: 18px;
 }
 
 li.system_item input.error {

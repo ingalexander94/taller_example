@@ -18,7 +18,7 @@ import ComponentItem from "./components/ComponentItem";
 import DeleteTeam from "./components/DeleteTeam";
 import arrowIcon from "src/assets/icons/arrow.svg";
 import editIcon from "src/assets/icons/edit.svg";
-import addIcon from "src/assets/icons/AddCompany.svg";
+import plusIcon from "src/assets/icons/plus-icon.svg";
 import styles from "./infoteam.module.css";
 
 const InfoTeam = () => {
@@ -277,8 +277,8 @@ const InfoTeam = () => {
         <section className={styles.info_actions}>
           <div>
             <h4>{temporaryState.teamSave?.team_name}</h4>
-            <button onClick={handleShow}>
-              <img src={editIcon} alt="Edit Icon" />
+            <button className="btn_secondary" onClick={handleShow}>
+              <img src={editIcon} alt="Edit Icon" /> Editar equipo
             </button>
             <DeleteTeam />
           </div>
@@ -303,13 +303,14 @@ const InfoTeam = () => {
             className={`animate__animated animate__faster ${styles.components}`}
           >
             <div className={styles.add}>
-              <h3>Componentes</h3>
+              <h3>Listados de componentes asociados al equipo</h3>
               <button
                 type="button"
                 onClick={handleAddComponent}
-                className="btn_red"
+                className="btn_black"
               >
-                <img src={addIcon} alt="Add icon" /> Agregar componente
+                <img src={plusIcon} alt="Plus icon" />
+                Agregar componente
               </button>
             </div>
             <div className={styles.list_components}>
@@ -341,9 +342,14 @@ const InfoTeam = () => {
             className={`animate__animate animate__faster ${styles.models}`}
           >
             <div className={styles.add}>
-              <h3>Marcas y modelos</h3>
-              <button onClick={handleAddBrand} className="btn_red">
-                <img src={addIcon} alt="Add icon" /> Agregar marca
+              <h3>Listado de los modelos OEM</h3>
+              <button
+                type="button"
+                onClick={handleAddBrand}
+                className="btn_black"
+              >
+                <img src={plusIcon} alt="Plus icon" />
+                Agregar marca
               </button>
             </div>
             <form autoComplete="off">
@@ -371,7 +377,7 @@ const InfoTeam = () => {
             }`}
           >
             <img src={arrowIcon} alt="Arrow icon" />
-            Anterior
+            Listados de componentes
           </button>
 
           <div className={styles.save_button}>
@@ -381,7 +387,7 @@ const InfoTeam = () => {
                 temporaryState.step === 2 ? styles.hide : "btn_red"
               }`}
             >
-              Siguiente
+              Listado de modelos OEM
               <img src={arrowIcon} alt="Arrow icon" />
             </button>
             {temporaryState.step === 1 ? (

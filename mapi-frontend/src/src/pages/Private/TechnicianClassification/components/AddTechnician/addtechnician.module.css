@@ -69,29 +69,36 @@ article.container_modal div.overlay {
 .formColumn ul {
   display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 4px);
   left: 0;
-  width: 100%;
+  width: 230px;
   background-color: var(--white-color);
-  border: 1px solid var(--gray-text);
+  border: 2px solid var(--background-color);
   border-radius: 4px;
   z-index: 1000;
-  padding: 10px 10px 0px 10px;
-  box-sizing: border-box;
+  padding: 12px;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
 .formColumn ul li {
   cursor: pointer;
   list-style: none;
   height: 30px;
-  margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
-  color: var(--disabled-color);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  padding: 0 10px;
 }
 
 .formColumn ul li:hover {
-  background-color: gainsboro;
+  background: var(--background-color);
 }
 
 .formColumn ul li img {
@@ -99,7 +106,7 @@ article.container_modal div.overlay {
 }
 
 .formColumn input[type="checkbox"]:checked ~ ul {
-  display: block;
+  display: flex;
 }
 
 .formGroup input {

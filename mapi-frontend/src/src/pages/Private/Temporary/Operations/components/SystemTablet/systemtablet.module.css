@@ -3,7 +3,7 @@ div.table_system {
 }
 
 div.table_system ul {
-  grid-template-columns: 1fr 50px 1fr 100px 80px 1fr 100px 110px 70px;
+  grid-template-columns: 1fr 50px 1fr 100px 80px 1fr 100px 110px 100px;
 }
 
 div.table_system div.table_header ul {
@@ -87,47 +87,20 @@ div.table_system div.table_content div.table_item > label ul {
   font-weight: 400;
   line-height: 14px;
 }
+
 div.table_system div.table_content div.table_item > label ul li {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 div.table_system div.table_content div.table_item > label ul li:nth-child(1) {
   display: flex;
 }
 
 div.table_system div.table_content div.table_item strong {
   text-align: center;
-}
-
-div.table_system div.table_content div.table_item > label ul li.show strong {
-  position: relative;
-}
-
-div.table_system div.table_content div.table_item > label ul li.show {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-
-div.table_system
-  div.table_content
-  div.table_item
-  > label
-  ul
-  li.show
-  strong::after {
-  content: "";
-  position: absolute;
-  right: -25px;
-  top: -3px;
-  width: 20px;
-  height: 20px;
-  background-image: url("../../../../../../assets/icons/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: 0.5s;
 }
 
 div.table_system div.table_content div.table_item > label ul li {
@@ -143,7 +116,7 @@ div.table_system div.table_content div.table_item > label ul li figure {
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  line-height: 14px; 
+  line-height: 14px;
   margin-right: 10px;
 }
 
@@ -230,9 +203,8 @@ div.table_system
   input[type="checkbox"]:checked
   ~ label
   ul
-  li.show
-  strong::after {
-  transform: rotate(-180deg);
+  li {
+  -webkit-line-clamp: inherit;
 }
 
 div.table_system
@@ -241,8 +213,10 @@ div.table_system
   input[type="checkbox"]:checked
   ~ label
   ul
-  li {
-  -webkit-line-clamp: inherit;
+  div.buttons
+  button:nth-child(3)
+  img {
+  transform: rotate(-180deg);
 }
 
 .table_content ul li {
@@ -257,7 +231,11 @@ div.buttons {
 }
 
 div.buttons button.btn_edit {
-  background-color: var(--gray-dark-color);
+  background-color: var(--black-color);
+}
+
+div.buttons button.btn_edit img {
+  filter: brightness(0) invert(1);
 }
 
 div.buttons img {
@@ -265,35 +243,35 @@ div.buttons img {
   height: 12px;
   object-fit: contain;
 }
+
 div.buttons button {
   background: transparent;
-  border-radius: 50%;
-  width: 30px;
-  height: 26px;
+  border-radius: 4px;
+  min-width: 30px;
+  height: 30px;
   display: grid;
   place-items: center;
 }
-div.buttons button:hover {
-  background: var(--white-color);
+
+div.buttons button:nth-child(3) {
+  pointer-events: none;
 }
 
-div.buttons button:nth-child(2) {
-  background: var(--error-color);
+div.buttons button:nth-child(3) img {
+  transition: 0.5s;
+}
+
+div.table_system div.table_content div.table_item > label ul li.show {
+  text-align: center;
 }
 
 @media screen and (max-width: 1500px) {
   div.table_system ul {
-    grid-template-columns: 1fr 50px 1fr 80px 80px 1fr 100px 90px 50px;
+    grid-template-columns: 1fr 50px 1fr 80px 80px 1fr 100px 90px 20px;
   }
-  div.table_system div.table_content div.table_item > label ul li.show {
-    display: flex;
-    justify-content: start;
-    gap: 5px;
-  }
-}
 
-@media screen and (max-width: 1400px) {
-  div.table_system ul {
-    grid-template-columns: 1fr 50px 1fr 80px 50px 1fr 100px 90px 70px;
+  div.buttons button {
+    width: 25px;
+    min-height: 25px;
   }
 }

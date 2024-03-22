@@ -1,14 +1,14 @@
+import { debounce } from "lodash";
 import { ChangeEvent, useContext, useEffect, useRef, useState } from "react";
 import { Brand } from "src/interfaces";
 import ModelItem from "../ModelItem";
-import addIcon from "src/assets/icons/AddCompany.svg";
-import deleteIcon from "src/assets/icons/delete.svg";
-import styles from "./brandItem.module.css";
-import { debounce } from "lodash";
 import { useAxios } from "src/hooks";
 import { UIContext } from "src/context";
 import { BrandService } from "src/services";
 import { Alerts } from "src/lib";
+import deleteIcon from "src/assets/icons/delete.svg";
+import plusIcon from "src/assets/icons/plus-icon.svg";
+import styles from "./brandItem.module.css";
 
 type Props = {
   index: number;
@@ -139,9 +139,10 @@ const BrandItem = ({
           type="button"
           disabled={isDisabled}
           onClick={() => addModel(index)}
-          className="btn_red"
+          className="btn_black"
         >
-          <img src={addIcon} alt="Add icon" /> Agregar modelo
+          <img src={plusIcon} alt="Plus icon" />
+          Agregar sistema
         </button>
       </div>
     </li>

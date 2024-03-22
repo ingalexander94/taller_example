@@ -89,15 +89,4 @@ li.brand_item div.add_model button {
   font-size: 10px;
   font-weight: 700;
   line-height: 12px;
-  background: transparent;
-}
-
-li.brand_item div.add_model button:hover {
-  color: var(--primary-color);
-}
-
-li.brand_item div.add_model button img,
-li.brand_item div.add_model button:hover img {
-  filter: invert(7%) sepia(86%) saturate(5803%) hue-rotate(358deg)
-    brightness(92%) contrast(107%) !important;
 }

@@ -117,7 +117,7 @@ section.list_system div.info_system input[type="checkbox"] {
   display: none;
 }
 
-section.list_system div.info_system input[type="checkbox"]:checked ~ ul  {
+section.list_system div.info_system label:hover ~ ul {
   display: flex;
 }
 
@@ -132,7 +132,28 @@ section.list_system div.info_system ul {
   left: 0;
   z-index: 5;
   border-radius: 4px;
-  border: 2px solid var(--black-color);
+  box-shadow: 0px 0px 20px 0px #89939e33;
+}
+
+section.list_system div.info_system ul::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 20px;
+  top: -8px;
+  left: 4px;
+  background: var(--white-color);
+  transform: rotate(45deg);
+}
+
+section.list_system div.info_system ul::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  top: -2px;
+  left: -2px;
+  height: 4px;
+  background: #fcfcfc;
 }
 
 section.list_system div.info_system ul li {

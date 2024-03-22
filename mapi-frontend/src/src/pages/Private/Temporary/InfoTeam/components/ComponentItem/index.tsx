@@ -1,13 +1,15 @@
 import { ChangeEvent, useContext } from "react";
 import { Component } from "src/interfaces";
 import SystemItem from "../SystemItem";
-import deleteIcon from "src/assets/icons/delete.svg";
-import addIcon from "src/assets/icons/AddCompany.svg";
-import styles from "./componentitem.module.css";
 import { Alerts } from "src/lib";
 import { UIContext } from "src/context";
 import { useAxios } from "src/hooks";
 import { ComponentService } from "src/services";
+import deleteIcon from "src/assets/icons/delete.svg";
+import plusIcon from "src/assets/icons/plus-icon.svg";
+import addIcon from "src/assets/icons/AddCompany.svg";
+import arrowIcon from "src/assets/icons/arrow.svg";
+import styles from "./componentitem.module.css";
 
 type Props = {
   index: number;
@@ -99,44 +101,71 @@ const ComponentItem = ({
         <p>{component.component_systems.length} sistemas</p>
       )}
 
+      <input type="checkbox" name="open_system" id={`system${index}`} />
+
       <div>
         <button
           onClick={handleRemoveComponent}
           type="button"
           className="btn_red"
         >
-          Eliminar componente <img src={deleteIcon} alt="delete icon" />
+          <img src={deleteIcon} alt="delete icon" /> Eliminar componente
         </button>
+
+        {!component.component_systems.length ? (
+          <button
+            className="btn_secondary"
+            type="button"
+            onClick={() => {
+              const input: HTMLInputElement | null = document.querySelector(
+                `input#system${index}`
+              );
+              if (input) input.checked = true;
+              addSystem(index);
+            }}
+          >
+            <img src={addIcon} alt="add icon" /> Agregar sistema
+          </button>
+        ) : (
+          <label htmlFor={`system${index}`}>
+            Ver detalles <img src={arrowIcon} alt="Arrow icon" />
+          </label>
+        )}
       </div>
-      <div
-        className={`${
-          !component.component_systems.length ? styles.empty : ""
-        } ${styles.list_systems}`}
-      >
-        <div>
-          <ul>
-            {component.component_systems.map((system, i) => (
-              <SystemItem
-                key={i}
-                indexSystem={i}
-                indexComponent={index}
-                system={system}
-                formik={formik}
-                removeSystem={removeSystem}
-              />
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className={styles.add_button}>
-        <button
-          type="button"
-          onClick={() => addSystem(index)}
-          className="btn_secondary"
+      <section>
+        <div
+          className={`${
+            !component.component_systems.length ? styles.empty : ""
+          } ${styles.list_systems}`}
         >
-          <img src={addIcon} alt="Add icon" /> Agregar sistema
-        </button>
-      </div>
+          <div>
+            <ul>
+              {component.component_systems.map((system, i) => (
+                <SystemItem
+                  key={i}
+                  indexSystem={i}
+                  indexComponent={index}
+                  system={system}
+                  formik={formik}
+                  removeSystem={removeSystem}
+                />
+              ))}
+            </ul>
+          </div>
+        </div>
+        {component.component_systems.length > 0 && (
+          <div className={styles.add_button}>
+            <button
+              type="button"
+              onClick={() => addSystem(index)}
+              className="btn_black"
+            >
+              <img src={plusIcon} alt="Plus icon" />
+              Agregar sistema
+            </button>
+          </div>
+        )}
+      </section>
     </li>
   );
 };

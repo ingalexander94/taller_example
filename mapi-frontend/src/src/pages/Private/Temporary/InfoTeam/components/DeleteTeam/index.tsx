@@ -34,8 +34,8 @@ const DeleteTeam = () => {
   };
 
   return (
-    <button type="button" onClick={handleDeleteTeam}>
-      <img src={deleteIcon} alt="Delete Icon" />
+    <button type="button" className="btn_red" onClick={handleDeleteTeam}>
+      <img src={deleteIcon} alt="Delete Icon" /> Eliminar equipo
     </button>
   );
 };

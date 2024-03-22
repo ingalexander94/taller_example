@@ -135,7 +135,7 @@ button:disabled {
 button.btn_secondary,
 a.btn_secondary {
   border-radius: 5px;
-  border: 2px solid var(--black-color);
+  border: 1.5px solid var(--black-color);
   outline: none;
   height: 50px;
   text-align: center;
@@ -155,7 +155,7 @@ a.btn_secondary:hover {
 }
 
 button.btn_secondary:disabled {
-  border: 2px solid var(--background-color);
+  border: 1.5px solid var(--background-color);
   color: var(--disabled-color);
 }
 

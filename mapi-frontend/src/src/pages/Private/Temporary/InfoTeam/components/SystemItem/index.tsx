@@ -111,7 +111,7 @@ const SystemItem = ({
         }
       />
       <button onClick={handleDeleteSystem} type="button" className="btn_red">
-        Eliminar sistema <img src={deleteIcon} alt="Delete Icon" />
+        <img src={deleteIcon} alt="Delete Icon" /> Eliminar sistema
       </button>
     </li>
   );
