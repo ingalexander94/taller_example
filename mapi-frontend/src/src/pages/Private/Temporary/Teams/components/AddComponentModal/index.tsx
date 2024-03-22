@@ -14,7 +14,7 @@ type Props = {
 const AddComponentModal = ({ closeModal }: Props) => {
   const saveModalRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState<boolean>(false);
-  const { temporaryState, setComponents, setComponentActive } =
+  const { temporaryState, addComponent, setComponentActive } =
     useContext(TemporaryContext);
   const { callEndpoint } = useAxios();
 
@@ -29,7 +29,7 @@ const AddComponentModal = ({ closeModal }: Props) => {
         const res = await callEndpoint(ComponentService.create(values));
         if (res) {
           const { data: component } = res.data;
-          setComponents([component]);
+          addComponent(component);
           setComponentActive(component);
         }
         setLoading(false);

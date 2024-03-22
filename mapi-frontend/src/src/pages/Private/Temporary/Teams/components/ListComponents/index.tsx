@@ -123,25 +123,31 @@ const ListComponents = () => {
                       onClick={() => handleActiveModel(model)}
                       key={index}
                     >
-                      <img src={infoIcon} alt="Info icon" />
+                      <input
+                        type="checkbox"
+                        name="model"
+                        id={`model${index}`}
+                      />
+                      <label htmlFor={`model${index}`}>
+                        <img src={infoIcon} alt="Info icon" />
+                      </label>
                       <p>{model.model_code}</p>
                       <p>{model.model_name}</p>
                       <div>
                         <p>
-                          <strong>Aplicación:</strong> TRACTO CAMIÓN
+                          <strong>Aplicación:</strong> {model.model_application}
                         </p>
                         <p>
-                          <strong>Años:</strong> 2003-2019
+                          <strong>Años:</strong> {model.model_init_year}-{model.model_final_year}
                         </p>
                         <p>
-                          <strong>Motor:</strong> CUMMINS ISX400
+                          <strong>Motor:</strong> {model.model_engine}
                         </p>
                         <p>
-                          <strong>Puente trasero:</strong> MERITOR RT46
+                          <strong>Puente trasero:</strong> {model.model_rear_bridge}
                         </p>
                         <p>
-                          <strong>Transmisión:</strong> EATON-FULLER RTLO16918B
-                          (18 velocidades)
+                          <strong>Transmisión:</strong> {model.model_transmission}
                         </p>
                       </div>
                     </li>

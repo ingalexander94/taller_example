@@ -264,13 +264,16 @@ div.table_system
   content: "";
   position: absolute;
   right: -25px;
-  top: -3px;
+  top: -4px;
   width: 20px;
   height: 20px;
   background-image: url("../../../../../../assets/icons/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   transition: 0.5s;
+  border-radius: 4px;
+  border: 1px solid var(--black-color);
+  background-color: var(--white-color);
 }
 
 div.table_system div.table_content div.table_item label ul li {
@@ -308,17 +311,35 @@ div.table_system div.table_content div.table_item label ul li span {
 
 div.table_system div.table_content div.table_item > div {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0;
   display: none;
   height: 0;
+  background: var(--background-color);
 }
 
 div.table_system div.table_content div.table_item > div div {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   column-gap: 40px;
+  width: 100%;
+  background: var(--white-color);
+  padding: 5px 10px;
+}
+
+div.table_system div.table_content div.table_item > div div div {
+  display: flex;  
+}
+
+div.table_system div.table_content div.table_item > div div div:nth-child(1) {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+div.table_system div.table_content div.table_item > div div div:nth-child(2) {
+  justify-content: flex-end;
+  text-align: right;
 }
 
 div.table_system div.table_content div.table_item > div div p {
@@ -360,10 +381,9 @@ div.table_system
   div.table_item
   input[type="checkbox"]:checked
   ~ div {
-  padding: 10px 30px 10px 10px;
+  padding: 10px;
   display: flex;
   height: fit-content;
-  background: var(--background-color);
 }
 
 div.table_system
@@ -372,15 +392,6 @@ div.table_system
   input[type="checkbox"]:checked
   ~ label {
   background: var(--background-color);
-}
-
-div.table_system
-  div.table_content
-  div.table_item
-  input[type="checkbox"]:checked
-  ~ label
-  ul {
-  border-bottom: 1px solid var(--disabled-color);
 }
 
 div.table_system

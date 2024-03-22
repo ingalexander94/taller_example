@@ -165,8 +165,16 @@ section.list_components > ul.components > div ul {
   background: var(--background-color);
 }
 
-section.list_components > ul.components > div ul li img {
-  width: 15px;
+section.list_components > ul.components > div ul li label {
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+section.list_components > ul.components > div ul li label img {
+  object-fit: contain;
+  width: 26px;
+  height: 26px;
 }
 
 section.list_components > ul.components > div ul li img.models_time {
@@ -185,8 +193,8 @@ section.list_components > ul.components li.active {
   cursor: default;
   color: var(--white-color);
   background-image: url("../../../../../../assets/icons/arrow-white.svg");
-  background-size: 12px;
-  background-position: 99%;
+  background-size: 16px;
+  background-position: 96%;
 }
 
 section.list_components > ul.components li:not(.active):hover {
@@ -212,8 +220,8 @@ section.list_components > ul.components li {
   line-height: 12px;
   background-image: url("../../../../../../assets/icons/arrow-right.svg");
   background-repeat: no-repeat;
-  background-size: 6px;
-  background-position: 98% center;
+  background-size: 8px;
+  background-position: 95% center;
   position: relative;
   background-color: var(--white-color);
   border-radius: 4px;
@@ -223,22 +231,21 @@ section.list_components > ul.components li p {
   line-height: 30px;
 }
 
-section.list_components > ul.components li img {
-  cursor: pointer;
-}
-
 section.list_components > ul.components li > div {
   grid-column-start: 1;
   grid-column-end: 4;
   background: var(--white-color);
   color: var(--black-color);
-  height: fit-content;
   left: 345px;
-  /* margin-top: 4px; */
   border-radius: 4px;
-  /* padding: 12px; */
   height: 0;
   overflow: hidden;
+}
+
+section.list_components > ul.components li  input[type="checkbox"]:checked ~ div {
+  margin-top: 4px;
+  padding: 12px;
+  height: fit-content;
 }
 
 section.list_components > ul.components li > div p {
@@ -273,6 +280,15 @@ section.list_components > ul.components > li {
 section.list_components > ul.components > li div {
   display: flex;
   justify-content: flex-end;
+}
+
+section.list_components
+> ul.components
+  div.brand_item
+  input[type="checkbox"]:checked
+  ~ label::after {
+  top: 12px;
+  transform: rotate(-90deg);
 }
 
 section.list_components

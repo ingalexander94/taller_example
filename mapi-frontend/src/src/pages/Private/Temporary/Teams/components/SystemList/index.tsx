@@ -13,13 +13,14 @@ import { Component } from "src/interfaces";
 import { useAxios } from "src/hooks";
 import { ComponentService } from "src/services";
 import { TemporaryContext } from "src/context";
+import AddComponentModal from "../AddComponentModal";
 import errorIcon from "src/assets/icons/error.svg";
 import searchIcon from "src/assets/icons/search.svg";
 import arrowIcon from "src/assets/icons/arrow.svg";
 import plusIcon from "src/assets/icons/plus-icon.svg";
+import infoIcon from "src/assets/icons/info-outline.svg";
 import mechanic from "src/assets/Background_mechanic 2.svg";
 import styles from "./systemlist.module.css";
-import AddComponentModal from "../AddComponentModal";
 
 const SystemList = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -117,6 +118,60 @@ const SystemList = () => {
 
         {temporaryState.components.length > 0 && (
           <>
+            <div className={styles.info_system}>
+              <div>
+                <input type="checkbox" name="info" id="show_info" />
+                <label htmlFor="show_info">
+                  <img src={infoIcon} alt="Info icon" />
+                </label>
+                <ul>
+                  <li>
+                    <strong>Aplicación:</strong>{" "}
+                    {temporaryState.modelActive?.model_application}
+                  </li>
+                  <li>
+                    <strong>Años:</strong>{" "}
+                    {temporaryState.modelActive?.model_init_year}-
+                    {temporaryState.modelActive?.model_final_year}
+                  </li>
+                  <li>
+                    <strong>Motor:</strong>{" "}
+                    {temporaryState.modelActive?.model_engine}
+                  </li>
+                  <li>
+                    <strong>Puente trasero:</strong>{" "}
+                    {temporaryState.modelActive?.model_rear_bridge}
+                  </li>
+                  <li>
+                    <strong>Transmisión:</strong>{" "}
+                    {temporaryState.modelActive?.model_transmission}
+                  </li>
+                </ul>
+                ({temporaryState.modelActive?.model_code}) -{" "}
+                {temporaryState.modelActive?.model_name} -{" "}
+                {temporaryState.modelActive?.model_application}
+              </div>
+              <div className={styles.system_search}>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={code}
+                  onChange={handleChange}
+                  placeholder="Buscar operación por código"
+                />
+                <button
+                  onClick={handleReset}
+                  className={`${styles.search_icon} ${
+                    code.length ? styles.active : ""
+                  }`}
+                >
+                  <img
+                    src={code.length ? errorIcon : searchIcon}
+                    alt="Error icon"
+                  />
+                </button>
+              </div>
+            </div>
             <div className={styles.system_actions}>
               <div
                 className={`${styles.list_components} ${styles.list_components_buttons}`}
@@ -144,26 +199,10 @@ const SystemList = () => {
                   <img src={arrowIcon} alt="Arrow icon" />
                 </button>
               </div>
-              <div>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={code}
-                  onChange={handleChange}
-                  placeholder="Buscar operación por código"
-                />
-                <button
-                  onClick={handleReset}
-                  className={`${styles.search_icon} ${
-                    code.length ? styles.active : ""
-                  }`}
-                >
-                  <img
-                    src={code.length ? errorIcon : searchIcon}
-                    alt="Error icon"
-                  />
-                </button>
-              </div>
+              <button onClick={() => setShow(true)} className="btn_black">
+                <img src={plusIcon} alt="Plus icon" />
+                Agregar componente
+              </button>
             </div>
             <SystemTable handleReset={handleReset} />
           </>

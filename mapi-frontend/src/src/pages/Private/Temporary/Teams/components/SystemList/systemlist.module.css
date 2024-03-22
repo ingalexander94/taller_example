@@ -1,5 +1,5 @@
 section.list_system {
-  padding: 14px;
+  padding: 0 14px;
 }
 
 section.list_system aside.empty {
@@ -75,11 +75,17 @@ section.list_system div.system_actions div.list_components ul {
   scroll-padding-left: 20px;
 }
 
-section.list_system div.system_actions div.list_components_buttons button:hover {
+section.list_system
+  div.system_actions
+  div.list_components_buttons
+  button:hover {
   background: inherit;
 }
 
-section.list_system div.system_actions div.list_components_buttons button:active {
+section.list_system
+  div.system_actions
+  div.list_components_buttons
+  button:active {
   transform: scale(0.8);
 }
 
@@ -95,6 +101,90 @@ section.list_system div.system_actions div.list_components_buttons button img {
   width: 14px;
   height: 14px;
   object-fit: contain;
+}
+
+section.list_system div.info_system {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--disabled-color);
+  padding: 10px 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+section.list_system div.info_system input[type="checkbox"] {
+  display: none;
+}
+
+section.list_system div.info_system input[type="checkbox"]:checked ~ ul  {
+  display: flex;
+}
+
+section.list_system div.info_system ul {
+  background: var(--white-color);
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  width: fit-content;
+  padding: 12px;
+  top: 50px;
+  left: 0;
+  z-index: 5;
+  border-radius: 4px;
+  border: 2px solid var(--black-color);
+}
+
+section.list_system div.info_system ul li {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+section.list_system div.info_system > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  column-gap: 12px;
+}
+
+section.list_system div.info_system div.system_search {
+  position: relative;
+}
+
+section.list_system div.info_system div.system_search input {
+  width: 230px;
+  height: 30px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--black-color);
+}
+
+section.list_system div.info_system div.system_search button {
+  position: absolute;
+  right: 10px;
+  width: fit-content;
+  height: fit-content;
+  top: 7px;
+  background: none;
+}
+
+section.list_system div.info_system div.system_search button img {
+  width: 16px;
+  height: 16px;
+}
+
+section.list_system div.info_system > div label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 section.list_system
@@ -186,20 +276,6 @@ section.list_system div.system_actions ul {
   column-gap: 8px;
 }
 
-section.list_system div.system_actions button.search_icon {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: none;
-  top: 6px;
-  right: 10px;
-  pointer-events: none;
-}
-
-section.list_system div.system_actions button.search_icon.active {
-  pointer-events: all;
-}
-
 section.list_system div.system_actions div {
   flex-direction: row-reverse;
   position: relative;
@@ -212,73 +288,7 @@ section.list_system div.system_actions p {
   max-width: 230px;
 }
 
-section.list_system div.system_actions button {
-  height: 30px;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 700;
-  white-space: nowrap;
-  text-wrap: nowrap;
-  padding: 0 10px;
-  line-height: 12px;
-}
-
-section.list_system div.system_actions button img {
-  height: 15px;
-  width: 15px;
-  object-fit: contain;
-}
-
-section.list_system div.system_actions input {
-  height: 30px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14px;
-  padding-left: 10px;
-  padding-right: 35px;
-  min-width: 210px;
-}
-
 @media screen and (max-width: 1450px) {
-  section.list_system div.system_actions input {
-    min-width: auto;
-    width: 30px;
-    padding: 0;
-    text-align: center;
-    color: transparent;
-    background-position: 50%;
-    cursor: pointer;
-  }
-
-  section.list_system div.system_actions button.search_icon {
-    width: 16px;
-    height: 16px;
-    right: 5px;
-  }
-
-  section.list_system div.system_actions input::placeholder {
-    color: transparent;
-  }
-
-  section.list_system div.system_actions input:focus {
-    width: 280px;
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 30px;
-    color: var(--text-color);
-  }
-
-  section.list_system div.system_actions input:focus::placeholder {
-    color: var(--disabled-color);
-  }
-
-  section.list_system
-    div.system_actions
-    input:focus
-    ~ button:not(.search_icon) {
-    display: none;
-  }
-
   section.list_system aside.empty img {
     width: 180px;
     height: 180px;

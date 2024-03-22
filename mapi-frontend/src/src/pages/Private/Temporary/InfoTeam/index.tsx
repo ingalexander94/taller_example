@@ -282,25 +282,6 @@ const InfoTeam = () => {
             </button>
             <DeleteTeam />
           </div>
-          {temporaryState.step === 1 ? (
-            <button
-              onClick={() => handleSubmit("component")}
-              type="submit"
-              disabled={!componentFormik.dirty || !componentFormik.isValid}
-            >
-              Guardar actualización
-            </button>
-          ) : (
-            <button
-              onClick={() => handleSubmit("brand")}
-              type="submit"
-              disabled={!brandFormik.dirty || !brandFormik.isValid}
-            >
-              Guardar actualización
-            </button>
-          )}
-        </section>
-        <div>
           <ul>
             <li
               onClick={() => setStep(1)}
@@ -315,7 +296,7 @@ const InfoTeam = () => {
               <span>2</span>Marcas y modelos
             </li>
           </ul>
-        </div>
+        </section>
         <section className={styles.info_forms}>
           <div
             ref={componentsContainerRef}
@@ -385,18 +366,42 @@ const InfoTeam = () => {
         <div className={styles.to_back_next}>
           <button
             onClick={() => setStep(1)}
-            className={temporaryState.step === 1 ? styles.hide : "btn_red"}
+            className={`${styles.back} ${
+              temporaryState.step === 1 ? styles.hide : "btn_red"
+            }`}
           >
             <img src={arrowIcon} alt="Arrow icon" />
             Anterior
           </button>
-          <button
-            onClick={() => setStep(2)}
-            className={temporaryState.step === 2 ? styles.hide : "btn_red"}
-          >
-            Siguiente
-            <img src={arrowIcon} alt="Arrow icon" />
-          </button>
+
+          <div className={styles.save_button}>
+            <button
+              onClick={() => setStep(2)}
+              className={`${styles.next} ${
+                temporaryState.step === 2 ? styles.hide : "btn_red"
+              }`}
+            >
+              Siguiente
+              <img src={arrowIcon} alt="Arrow icon" />
+            </button>
+            {temporaryState.step === 1 ? (
+              <button
+                onClick={() => handleSubmit("component")}
+                type="submit"
+                disabled={!componentFormik.dirty || !componentFormik.isValid}
+              >
+                Guardar actualización
+              </button>
+            ) : (
+              <button
+                onClick={() => handleSubmit("brand")}
+                type="submit"
+                disabled={!brandFormik.dirty || !brandFormik.isValid}
+              >
+                Guardar actualización
+              </button>
+            )}
+          </div>
         </div>
       </article>
       {show && <SaveTeam closeModal={() => setShow(false)} />}

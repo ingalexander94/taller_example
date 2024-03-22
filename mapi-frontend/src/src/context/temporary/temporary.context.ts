@@ -18,6 +18,7 @@ export type TemporaryContextProps = {
   addTeam: (team: Team) => void;
   setOperations: (operations: Operation[]) => void;
   setComponents: (components: Component[]) => void;
+  addComponent: (component: Component) => void;
   removeOperation: (id_operation: number) => void;
   setTotalPagesOperation: (total_pages: number) => void;
   setComponentActive: (component: Component) => void;

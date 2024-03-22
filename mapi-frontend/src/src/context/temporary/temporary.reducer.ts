@@ -12,6 +12,7 @@ type TemporaryAction =
   | { type: "setSystems"; payload: SystemFilter[] }
   | { type: "setOperations"; payload: Operation[] }
   | { type: "setComponents"; payload: Component[] }
+  | { type: "addComponent"; payload: Component }
   | { type: "setTeamActive"; payload: Team | null }
   | { type: "setModelActive"; payload: Model | null }
   | { type: "setTeamSave"; payload: Team | null }
@@ -74,6 +75,11 @@ export const temporaryReducer = (
       return {
         ...state,
         components: [...action.payload],
+      };
+    case "addComponent":
+      return {
+        ...state,
+        components: [...state.components, action.payload],
       };
     case "removeOperation":
       return {

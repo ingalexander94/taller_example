@@ -90,7 +90,7 @@ const SystemTable = ({ handleReset }: Props) => {
         )
       );
       if (res) {
-        const { data } = res.data;  
+        const { data } = res.data;
         if (!isSystem || data.operations.length) {
           setOperations(data.operations);
           setTotalPages(data.totalPages);
@@ -210,10 +210,9 @@ const SystemTable = ({ handleReset }: Props) => {
             <li>Cód.</li>
             <li>Descripción de operación</li>
             <li>
-              <img src={filterBlackIcon} alt="Filter icon" /> Tipo de
-              mantenimiento
+              <img src={filterBlackIcon} alt="Filter icon" /> Tipo de MTTO
             </li>
-            <li>Valor</li>
+            <li>Valor M.O.</li>
           </ul>
         </div>
       )}
@@ -278,11 +277,12 @@ const SystemTable = ({ handleReset }: Props) => {
                         ? formatCurrency(operation.operation_total)
                         : "Sin especificar"}
                     </p>
-                    <strong>Ver</strong>
+                    <strong></strong>
                   </li>
                 </ul>
               </label>
               <div>
+                <div>
                 <div>
                   <p>
                     <span>Cód. técnico</span>
@@ -327,6 +327,7 @@ const SystemTable = ({ handleReset }: Props) => {
                       "Sin especificar"
                     )}
                   </p>
+                </div>
                 </div>
               </div>
             </div>

@@ -67,6 +67,10 @@ export const TemporaryProvider = ({ children }: Props) => {
     dispatch({ type: "setComponents", payload: components });
   };
 
+  const addComponent = (component: Component) => {
+    dispatch({ type: "addComponent", payload: component });
+  };
+
   const setSystems = (systems: SystemFilter[]) => {
     dispatch({ type: "setSystems", payload: systems });
   };
@@ -124,6 +128,7 @@ export const TemporaryProvider = ({ children }: Props) => {
         setShowEmpty,
         setComponents,
         setStep,
+        addComponent
       }}
     >
       {children}

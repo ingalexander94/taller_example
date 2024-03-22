@@ -69,8 +69,8 @@ input:focus,
 input:hover,
 textarea:focus,
 input:hover {
-  border: 1px solid var(--primary-color);
-  outline: none;
+  border: 1px solid var(--primary-color) !important;
+  outline: none !important;
 }
 
 input,
